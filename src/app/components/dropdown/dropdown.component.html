@@ -1,0 +1,9 @@
+<div class="dropdown" [ngClass]="isShown === true ? 'open' : 'closed'" (click)="toggleDropdown()">
+  <div class="title">{{selectedValue}}</div>
+  <div class="dropdown-menu">
+    <ul>
+      <li *ngFor="let movie of movies; let idx = index;" (click)="pickMovie(idx); toggleDropdown()">{{movie.title}}</li>
+    </ul>
+  </div>
+</div>
+<button (click)="setDefautlValue()" *ngIf="moviePicked">Reset</button>

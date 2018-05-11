@@ -1,0 +1,98 @@
+.dropdown {
+    text-align: left;
+    color: #343C3F;
+    border: 1px solid #A2ACB0;
+  }
+.dropdown.closed .dropdown-menu {
+  height: 0;
+}
+  .dropdown.closed .dropdown-menu li {
+    height: 0;
+  }
+  .dropdown.closed .title {
+    border-bottom: none;
+  }
+  .dropdown.closed .title:after {
+    margin-top: -16px;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  .dropdown .title {
+    width: 96%;
+    position: relative;
+    height: 20px;
+    padding: 12px 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #D9E1E4;
+  }
+.dropdown.closed .title:after {
+  display: block;
+  content: "▾";
+  position: absolute;
+  right: 10px;
+  margin-top: -16px;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+  .dropdown.open .title:after {
+    display: block;
+    content: "▾";
+    position: absolute;
+    right: 10px;
+    margin-top: -16px;
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+  .dropdown .dropdown-menu {
+    position: relative;
+    overflow: hidden;
+    max-height: 200px;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    transition: all 0.2s;
+  }
+  .dropdown ul {
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+  .dropdown ul li {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 1px solid #D9E1E4;
+    padding: 0 12px;
+    vertical-align: top;
+    overflow: hidden;
+    cursor: pointer;
+    -webkit-transition: margin-top 0.5s, height 0.5s;
+    -moz-transition: margin-top 0.5s, height 0.5s;
+    transition: margin-top 0.5s, height 0.5s;
+  }
+  .dropdown ul li:hover {
+    background-color: #D9E1E4;
+    color: #343C3F;
+  }
+.dropdown.open .dropdown-menu {
+  height: 200px;
+  margin-top: 0px;
+}
+.dropdown.open .dropdown-menu ul {
+  padding: 0;
+  margin: 0;
+  height: 200px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.dropdown.open .dropdown-menu li {
+  height: 40px;
+}
